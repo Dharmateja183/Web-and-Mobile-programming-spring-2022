@@ -1,0 +1,52 @@
+package com.tanvi.pizzaorder;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class Order extends AppCompatActivity {
+  //setting up the email summary
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_final);
+
+        TextView sum = (TextView)findViewById(R.id.sum);
+        final String summary = getIntent().getStringExtra("SUMMARY");
+        final String Name = getIntent().getStringExtra("NAME");
+        sum.setText(getIntent().getStringExtra("SUMMARY"));
+        Button or_btn = (Button)findViewById(R.id.or_sum);
+        Button or_btn1 = (Button)findViewById(R.id.or_sum2);
+        or_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String subject  = "Order details for: " + Name;
+             //calling the email function
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"pizza@abc.com"});
+                intent.putExtra(Intent.EXTRA_SUBJECT,subject);
+                intent.putExtra(Intent.EXTRA_TEXT,summary);
+
+                intent.setType("message/rfc822");
+                startActivity(Intent.createChooser(intent,"Choose Email Client"));
+            }
+        });
+        or_btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openOrder();
+            }
+        });
+
+    }
+    public void openOrder(){
+        Intent redirect = new Intent(this, BuildPizza.class);
+        startActivity(redirect);
+
+    }
+}
