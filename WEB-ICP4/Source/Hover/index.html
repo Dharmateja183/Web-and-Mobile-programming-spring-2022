@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <script src = "gallery.js"></script>
+</head>
+<body>
+
+<div>
+    <p id = "image">Hover over an image below to display<p>
+    <div id="buttons">
+        <button onclick = "openFunction()">Explain pictures</button>
+        <button onclick = "closeFunction()">Hide explaination</button>
+        <p id="content">This is a photo gallery, displaying the logos of baking cupcakes.</p>
+    </div>
+</div>
+<p id="header">My Kitchen Photo Gallery</p>
+
+<img alt="Lets do Batter!" class="preview"
+     onmouseout="unDo()"
+     onmouseover="upDate(this)"
+     src="https://cdn.sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-7.jpg">
+
+<img alt="Lets Bake!" class="preview"
+     onmouseout="unDo()"
+     onmouseover="upDate(this)"
+     src="https://cdn.sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-6.jpg">
+
+<img alt="Cupcake is ready to eat!" class="preview"
+     onmouseout="unDo()"
+     onmouseover="upDate(this)"
+     src="https://cdn.sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-5.jpg">
+</body>
+</html>

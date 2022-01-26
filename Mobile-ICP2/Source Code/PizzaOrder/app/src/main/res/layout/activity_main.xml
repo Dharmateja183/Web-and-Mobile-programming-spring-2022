@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/cap"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100sp"
+        android:layout_marginBottom="70sp"
+        android:gravity="center"
+        android:text="UMKC PIZZA ORDERING "
+        android:textColor="#000"
+        android:textSize="30sp"
+        android:textStyle="bold"></TextView>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="250sp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70sp"
+        android:src="@drawable/logo"></ImageView>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="30sp"
+        android:background="#1A6CAC"
+        android:padding="20sp"
+        android:text="Build Your Pizza"
+        android:textColor="#fff"></Button>
+</RelativeLayout>
