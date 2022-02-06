@@ -1,3 +1,3 @@
 # Web-and-Mobile-programming_-
-Dharma Teja Konidena
-dkbmy@umsystem.edu
+# Dharma Teja Konidena
+# dkbmy@umsystem.edu
