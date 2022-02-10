@@ -1,0 +1,37 @@
+<!DOCTYPE html> <!--This represents that the document type is HTML-->
+<html>
+<head>
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="gallery.css"> <!-- making a connection to css file-->
+    <script src = "gallery.js"></script><!-- making a connection to javascript file-->
+</head>
+<body>
+    <p id="header">My WEB_DEV Gallery</p>
+<!--main div section opens-->
+<div>
+    <p id = "image">Hover over an image below to display<p>
+        <!-- creating a responsive buttons -->
+    <div id="buttons">
+        <button onclick = "openFunction()">Explain pictures</button>
+        <button onclick = "closeFunction()">Hide explaination</button>
+        <p id="content">This is a sample photo gallery, about the Web Development.</p>
+    </div>
+</div>
+
+<!-- using functions to update image according to response -->
+<img src="images/1.jpg" alt=" " class="preview"
+     onmouseout="unDo()"
+     onmouseover="upDate(this)"
+     > <!--img path, url to display online image-->
+
+<img src="images/2.png" alt=" " class="preview"
+     onmouseout="unDo()"
+     onmouseover="upDate(this)"
+     >
+
+<img src="images/3.jpg" alt=" " class="preview"
+     onmouseout="unDo()"
+     onmouseover="upDate(this)"
+     >
+</body>
+</html>
